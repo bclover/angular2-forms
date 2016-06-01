@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Angular2Forms</title>
+  <title>Angular 2 - Forms</title>
   <base href="/">
 
   {{#unless environment.production}}
@@ -10,22 +10,30 @@
   {{/unless}}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Bootstrap - Latest compiled and minified CSS -->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+
+  <!-- Custom Application Styles -->
+  <link rel="stylesheet" href="app/styles.css">
+
 </head>
 <body>
-  <angular2-forms-app>Loading...</angular2-forms-app>
 
-  
+<angular2-forms-app>Loading...</angular2-forms-app>
 
-    {{#each scripts.polyfills}}<script src="{{.}}"></script>{{/each}}
-    <script>
-      System.import('system-config.js').then(function () {
-        System.import('main');
-      }).catch(console.error.bind(console));
-    </script>
+{{#each scripts.polyfills}}
+<script src="{{.}}"></script>
+{{/each}}
 
-  
-
-
+<script>
+  System.import('system-config.js').then(function () {
+    System.import('main');
+  }).catch(console.error.bind(console));
+</script>
 
 </body>
 </html>
